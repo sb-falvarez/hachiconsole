@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'graceful-fs';
 export  const  readFile =(filePath: string): Promise<string[]> => {
     let lines:string[] = [];
     try{
