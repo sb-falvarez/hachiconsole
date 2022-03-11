@@ -7,8 +7,7 @@ export const createCoverage = async (request:RequestCoverage) => {
         const response = await axios.post(url, request);
         return response.data;
     } catch (error:any) {
-        //console.error(error);
-        return `error: ${request.rut}-${request.typeDocument} - ${error.message}`;
+        return `error: ${ JSON.stringify(request)} - ${error.message}`;
     }
 
 }
